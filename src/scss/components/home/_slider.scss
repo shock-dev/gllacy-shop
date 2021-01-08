@@ -1,0 +1,74 @@
+.slider {
+  height: 580px;
+
+  &__title {
+    color: $white;
+    font-size: 60px;
+    line-height: 1;
+    max-width: 695px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 52%;
+    margin: 0 auto;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &__btn {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 76%;
+    font-size: 32px;
+    border-radius: 50px;
+    padding: 10px 30px;
+  }
+
+  .hooper {
+    height: 100%;
+    outline: none;
+
+    &-slide {
+      text-align: center;
+      position: relative;
+    }
+
+    &-pagination {
+      right: auto;
+      bottom: 60px;
+      transform: none;
+      padding: 0;
+    }
+
+    &-indicators {
+
+      li:not(:last-child) button {
+        margin-right: 8px;
+      }
+
+      button {
+        outline: none;
+        width: 21px;
+        height: 21px;
+        border-radius: 50%;
+        margin: 0;
+        border: 2px solid $white;
+        background-color: transparent;
+
+        &:hover {
+          background-color: rgba(#F8F7F4, .35);
+        }
+
+        &.is-active {
+          background-color: $white;
+        }
+
+      }
+
+    }
+
+  }
+
+}
