@@ -17,6 +17,7 @@ body {
   font-size: 16px;
   line-height: 22px;
   color: $light-black;
+  background-color: $mantle;
 }
 
 h1,
@@ -56,7 +57,7 @@ button {
 }
 
 .container {
-  max-width: 1180px;
-  padding: 0 15px;
+  max-width: 1200px;
+  padding: 0 25px;
   margin: 0 auto;
 }
