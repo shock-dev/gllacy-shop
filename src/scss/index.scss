@@ -4,6 +4,13 @@
 @import "global";
 
 // Components will be including here
-@import "components/header";
+@import "components/app/header";
+@import "components/home/slider";
+@import "components/home/index";
+@import "components/home/sales";
+@import "components/home/hits";
+@import "components/app/card";
+@import "components/home/about";
+@import "components/home/more";
 
 @import "media";
