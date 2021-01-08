@@ -3,4 +3,46 @@
   margin: 0 -25px;
   padding: 0 25px;
   background-image: url('~@/assets/img/map.jpg');
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  &__info {
+    background-color: $white;
+    padding: 30px 23px;
+    max-width: 305px;
+    border-radius: 15px;
+
+    &-address {
+
+      &__title {
+        margin-top: 4px;
+        margin-bottom: 10px;
+      }
+    }
+
+    &-phone {
+
+      &__title {
+        margin: 5px 0;
+      }
+    }
+
+    &-btn {
+      margin-top: 15px;
+      width: 100%;
+      padding: 10px 0;
+    }
+
+  }
+
+  .small {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .big {
+    font-size: 18px;
+    font-weight: 700;
+  }
 }
