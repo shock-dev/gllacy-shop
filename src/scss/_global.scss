@@ -72,4 +72,24 @@ button {
   max-width: 1200px;
   padding: 0 25px;
   margin: 0 auto;
+  position: relative;
+}
+
+.def-btn {
+  background: linear-gradient(0deg, rgba(231,74,53,1) 0%, rgba(242,104,67,1) 100%);
+  font-weight: 700;
+  color: $white;
+  padding: 8px 16px;
+  border-radius: 18px;
+  box-shadow: 0 2px 2px #AC1000;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    background: linear-gradient(0deg, rgba(231,74,53,1) 0%, rgb(241, 120, 85) 100%);
+  }
+
+  &:active {
+    background: linear-gradient(0deg, rgba(242,104,67,1) 0%, rgba(231,74,53,1) 100%);
+  }
 }
