@@ -7,6 +7,41 @@
     margin-right: 10px;
   }
 
+  &__button {
+    background-color: rgba($white, .3);
+    padding: 8px 16px;
+    border-radius: 20px;
+    outline: none;
+    transition: background-color .2s, color .2s;
+
+    &.search {
+      padding: 8px 10px;
+      border-radius: 50%;
+    }
+
+    &-text {
+      margin-left: 8px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    svg {
+      fill: $white;
+      transition: fill .2s;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: rgba($white, 1);
+      color: $light-black;
+
+      svg {
+        fill: $light-black;
+      }
+    }
+  }
 }
 
 .menu {
@@ -32,7 +67,7 @@
 
   &__link {
     border-radius: 25px;
-    padding: 6px 10px;
+    padding: 8px 10px;
     outline: none;
 
     &:active,
