@@ -1,5 +1,4 @@
 .header {
-  padding-top: 10px;
   color: $white;
   font-weight: 700;
   position: absolute;
@@ -7,6 +6,7 @@
   left: 0;
   right: 0;
   z-index: 100;
+  padding: 10px 25px 0;
 
   &__logo {
     margin-right: 10px;
