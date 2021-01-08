@@ -1,0 +1,41 @@
+.sales {
+  margin-top: -30px;
+  position: relative;
+  justify-content: space-between;
+
+  &__item {
+    color: $white;
+    border-radius: 18px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: 17px 20px 23px;
+    display: flex;
+    width: 49%;
+    flex-direction: column;
+
+    &.raspberry {
+      background-image: url('~@/assets/img/sales-item-bg-1.jpg');
+    }
+
+    &.chocolate {
+      background-image: url('~@/assets/img/sales-item-bg-2.jpg');
+    }
+
+    &-title {
+      font-size: 35px;
+      line-height: 41px;
+      font-weight: 700;
+    }
+
+    &-text {
+      margin: 10px 0 35px;
+      font-size: 17px;
+    }
+
+    &-btn {
+      margin-left: auto;
+      margin-top: auto;
+    }
+  }
+}
