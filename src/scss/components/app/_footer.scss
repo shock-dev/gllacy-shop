@@ -50,11 +50,11 @@
     svg {
       width: 32px;
       height: 32px;
-      fill: rgba($white, .8);
+      fill: rgba($white, .5);
       transition: fill .2s;
 
       &:hover {
-        fill: rgba($white, 1);
+        fill: $white;
       }
     }
 
