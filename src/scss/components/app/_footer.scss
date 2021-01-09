@@ -1,5 +1,40 @@
 .footer {
   padding: 30px 0;
+  color: $white;
+
+  &__links-col {
+    width: 165px;
+  }
+
+  &__link {
+    position: relative;
+    font-size: 13px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      background-color: rgba($white, .3);
+    }
+
+    &.like {
+      font-weight: 700;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: -20px;
+        width: 15px;
+        height: 13px;
+        transform: translateY(-50%);
+        background-image: url('~@/assets/img/heart.svg');
+      }
+    }
+  }
 }
 
 .social {
