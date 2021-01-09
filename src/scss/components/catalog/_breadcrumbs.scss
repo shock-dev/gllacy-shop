@@ -1,0 +1,36 @@
+.breadcrumbs {
+  position: relative;
+  z-index: 140;
+  color: $white;
+  font-size: 14px;
+  margin-bottom: 10px;
+
+  &__item:not(:last-child) {
+    padding-right: 15px;
+    margin-right: 10px;
+    position: relative;
+
+    &:after {
+      content: '»';
+      position: absolute;
+      right: 0;
+    }
+
+    .breadcrumbs__link {
+      position: relative;
+
+      &:after {
+        content: '';
+        position: absolute;
+        height: 1px;
+        width: 100%;
+        left: 0;
+        bottom: 4px;
+        background-color: rgba($white, .3);
+      }
+
+    }
+
+  }
+
+}

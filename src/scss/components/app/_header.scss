@@ -76,18 +76,6 @@
     &:not(:last-child) {
       margin-right: 14px;
     }
-
-    &.active .menu__link {
-      background-color: $orange;
-
-      &:active,
-      &:focus {
-        background-color: $btn-bg;
-        color: $light-black;
-      }
-
-    }
-
   }
 
   &__link {
@@ -96,10 +84,14 @@
     outline: none;
 
     &:active,
-    &:focus,
-    &.active {
+    &:focus {
       background-color: $btn-bg;
       color: $light-black;
+    }
+
+    &.active {
+      background-color: $orange;
+      color: $white;
     }
 
   }
