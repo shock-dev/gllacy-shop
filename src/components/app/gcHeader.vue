@@ -8,7 +8,7 @@
         <nav class="header__nav menu">
           <ul class="menu__list flex align">
             <li class="menu__item">
-              <router-link class="menu__link" to="#">Каталог</router-link>
+              <router-link class="menu__link" :to="{ name: 'Catalog' }" active-class="active">Каталог</router-link>
             </li>
             <li class="menu__item">
               <router-link class="menu__link" to="#">Доставка и оплата</router-link>
