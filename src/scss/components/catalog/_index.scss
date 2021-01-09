@@ -1,3 +1,11 @@
 .catalog {
   padding-top: 100px;
+  color: $white;
+
+  &__title {
+    font-size: 35px;
+    line-height: 41px;
+    font-weight: 700;
+    margin-bottom: 25px;
+  }
 }
