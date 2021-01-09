@@ -33,6 +33,13 @@
     &-slide {
       text-align: center;
       position: relative;
+      transform: scale(.5);
+      transition: transform .3s;
+
+      &.is-active {
+        transform: scale(1);
+        transition: transform .3s;
+      }
     }
 
     &-pagination {

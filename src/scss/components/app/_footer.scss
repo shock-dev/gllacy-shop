@@ -3,6 +3,10 @@
   padding: 30px 0;
   color: $white;
 
+  &__links-row:not(:last-child) {
+    margin-bottom: 5px;
+  }
+
   &__links-col {
     width: 165px;
   }
@@ -50,7 +54,7 @@
     svg {
       width: 32px;
       height: 32px;
-      fill: rgba($white, .5);
+      fill: rgba($white, .7);
       transition: fill .2s;
 
       &:hover {

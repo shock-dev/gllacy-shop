@@ -96,7 +96,8 @@
     outline: none;
 
     &:active,
-    &:focus {
+    &:focus,
+    &.active {
       background-color: $btn-bg;
       color: $light-black;
     }
