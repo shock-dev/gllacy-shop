@@ -23,7 +23,7 @@
         <div class="header__buttons flex align">
           <div class="header__button-wrapper">
             <button
-              @click="isSearchFormOpen = !isSearchFormOpen"
+              @click="openPopup('search')"
               class="header__button search"
             >
               <svg width="17" height="17">
@@ -35,7 +35,10 @@
             </div>
           </div>
           <div class="header__button-wrapper">
-            <button class="header__button login flex align" @click="isLoginFormOpen = !isLoginFormOpen">
+            <button
+              class="header__button login flex align"
+              @click="openPopup('login')"
+            >
               <svg width="21" height="19">
                 <use href="~@/assets/img/sprite.svg#login"></use>
               </svg>
@@ -53,11 +56,17 @@
               </div>
             </div>
           </div>
-          <button class="header__button cart flex align">
+          <button v-if="!products.length" class="header__button cart flex align disabled">
             <svg width="21" height="20">
               <use href="~@/assets/img/sprite.svg#cart"></use>
             </svg>
             <span class="header__button-text">Пусто</span>
+          </button>
+          <button v-else class="header__button cart flex align">
+            <svg width="21" height="20">
+              <use href="~@/assets/img/sprite.svg#cart"></use>
+            </svg>
+            <span class="header__button-text">{{ products.length }} товара</span>
           </button>
         </div>
       </div>
@@ -72,12 +81,30 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
   name: "gcHeader",
   data: () => ({
     isSearchFormOpen: false,
     isLoginFormOpen: false
   }),
+  computed: {
+    ...mapGetters('cart', {
+      products: 'items'
+    })
+  },
+  methods: {
+    openPopup(elem) {
+      if (elem === 'search') {
+        this.isLoginFormOpen = false
+        this.isSearchFormOpen = !this.isSearchFormOpen
+      } else if (elem === 'login') {
+        this.isSearchFormOpen = false
+        this.isLoginFormOpen = !this.isLoginFormOpen
+      }
+    }
+  },
   created() {
     const onClickOutside = e => this.isSearchFormOpen = this.$el.contains(e.target) && this.isSearchFormOpen;
     document.addEventListener('click', onClickOutside);

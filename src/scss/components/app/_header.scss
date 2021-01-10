@@ -32,6 +32,10 @@
       border-radius: 50%;
     }
 
+    &.cart.disabled {
+      pointer-events: none;
+    }
+
     &-text {
       margin-left: 8px;
     }
