@@ -135,7 +135,13 @@ export default {
     VueSlider
   },
   data: () => ({
-    slider: [100, 500]
-  })
+    slider: [100, 500],
+    isPopupActive: false
+  }),
+  created() {
+    const onClickOutside = e => this.isPopupActive = this.$el.contains(e.target) && this.isPopupActive;
+    document.addEventListener('click', onClickOutside);
+    this.$on('hook:beforeDestroy', () => document.removeEventListener('click', onClickOutside));
+  },
 }
 </script>
