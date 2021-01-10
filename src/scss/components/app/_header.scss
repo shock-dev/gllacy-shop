@@ -12,12 +12,20 @@
     margin-right: 10px;
   }
 
+  &__buttons > *:not(:last-child) {
+    margin-right: 10px;
+  }
+
   &__button {
     background-color: rgba($white, .3);
     padding: 8px 16px;
     border-radius: 20px;
     outline: none;
     transition: background-color .2s, color .2s;
+
+    &-wrapper {
+      position: relative;
+    }
 
     &.search {
       padding: 8px 10px;
@@ -26,10 +34,6 @@
 
     &-text {
       margin-left: 8px;
-    }
-
-    &:not(:last-child) {
-      margin-right: 10px;
     }
 
     svg {
@@ -44,6 +48,41 @@
 
       svg {
         fill: $light-black;
+      }
+    }
+  }
+
+  .search-form {
+    position: absolute;
+    top: calc(100% + 5px);
+    right: 0;
+    width: 340px;
+    background-color: $white;
+    padding: 20px 15px;
+    border-radius: 4px;
+    z-index: 160;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .2s;
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &__field {
+      position: relative;
+      width: 100%;
+      border: 1px solid #D3D3D2;
+      height: 44px;
+      padding: 0 15px;
+      outline: none;
+      color: $light-black;
+      font-size: 14px;
+      border-radius: 4px;
+
+      &::placeholder {
+        font-size: 14px;
       }
     }
   }
