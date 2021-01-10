@@ -34,11 +34,11 @@
       text-align: center;
       position: relative;
       transform: scale(.5);
-      transition: transform .3s;
+      transition: transform .5s;
 
       &.is-active {
         transform: scale(1);
-        transition: transform .3s;
+        transition: transform .5s;
       }
     }
 
