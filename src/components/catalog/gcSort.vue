@@ -3,7 +3,23 @@
     <div class="sort__row">
       <div class="sort__col">
         <div class="sort__col-title">Сортировка:</div>
-        <div class="sort__col-box"></div>
+        <div class="sort__col-box type">
+          <button
+            class="type__button"
+            :class="{ active: isPopupActive }"
+            @click="isPopupActive = !isPopupActive"
+          >
+            По популярности
+          </button>
+          <ul class="type__list" :class="{ active: isPopupActive }">
+            <li class="type__item">
+              <router-link class="type__link" to="#">По цене</router-link>
+            </li>
+            <li class="type__item">
+              <router-link class="type__link" to="#">По алфавиту</router-link>
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="sort__col">
         <div class="sort__col-title">Цена: {{ slider[0] }} руб. - {{ slider[1] }} руб.</div>
