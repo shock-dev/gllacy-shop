@@ -1,9 +1,13 @@
 .sort {
   font-weight: 500;
+  margin-bottom: 32px;
 
   &__row {
     display: flex;
-    margin-bottom: 15px;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
   }
 
   &__col {
