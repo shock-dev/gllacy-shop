@@ -20,7 +20,7 @@
     }
 
     &-box {
-      min-height: 38px;
+      min-height: 40px;
       background-color: rgba($white, .2);
       border-radius: 35px;
       display: flex;
@@ -60,6 +60,10 @@
 
   .toggle {
 
+    &__list {
+      align-items: center;
+    }
+
     &__item:not(:last-child) {
       margin-right: 22px;
     }
@@ -78,11 +82,11 @@
       appearance: none;
     }
 
-    &__real:checked + .toggle__fake {
+    &__real[type=checkbox]:checked + .toggle__fake {
       background-image: url('~@/assets/img/checkbox-on.svg');
     }
 
-    &__fake {
+    &__real[type=checkbox] + .toggle__fake {
       display: block;
       width: 26px;
       height: 23px;
@@ -90,6 +94,37 @@
       background-repeat: no-repeat;
       margin-right: 10px;
     }
+
+    &__real[type=radio]:checked + .toggle__fake {
+
+      &:after {
+        display: block;
+      }
+    }
+
+    &__real[type=radio] + .toggle__fake {
+      position: relative;
+      display: block;
+      width: 23px;
+      height: 23px;
+      border-radius: 50%;
+      border: 3px solid $white;
+      margin-right: 10px;
+
+      &:after {
+        content: '';
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 10px;
+        height: 10px;
+        background-color: $white;
+        border-radius: 50%;
+      }
+    }
+
 
   }
 
