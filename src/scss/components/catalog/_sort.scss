@@ -38,7 +38,7 @@
       min-height: 40px;
       padding: 0 20px;
       background-color: rgba($white, .2);
-      border: 2px solid $white;
+      border: 3px solid $white;
       border-radius: 35px;
       transition: background-color .2s;
       font-size: 16px;
@@ -58,8 +58,80 @@
 
   }
 
+  .type {
+    padding: 0;
+    min-height: auto;
+    position: relative;
+
+    &__button {
+      position: relative;
+      width: 100%;
+      height: 40px;
+      padding: 0 45px 0 20px;
+      border-radius: 35px;
+      transition: background-color .2s;
+      outline: none;
+
+      &:after {
+        content: '';
+        position: absolute;
+        width: 11px;
+        height: 10px;
+        top: 15px;
+        right: 15px;
+        background-image: url('~@/assets/img/triangle-down.svg');
+        background-repeat: no-repeat;
+        transition: transform .2s;
+      }
+
+      &.active::after {
+        transform: rotate(-180deg);
+      }
+
+      &:hover,
+      &:focus {
+        background-color: rgba($white, .1);
+      }
+
+      &:active {
+        background-color: rgba($white, .2);
+      }
+    }
+
+    &__list {
+      position: absolute;
+      top: calc(100% + 10px);
+      border-radius: 3px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity .2s;
+      overflow: hidden;
+
+      &.active {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    &__item,
+    &__link {
+      width: 100%;
+    }
+
+    &__link {
+      padding: 10px 30px;
+      background-color: white;
+      color: $light-black;
+
+      &:hover,
+      &:focus {
+        background-color: #dae7dc;
+      }
+    }
+  }
+
   .sort__col-box--slider {
-    width: 220px;
+    width: 210px;
   }
 
   .vue-slider {
