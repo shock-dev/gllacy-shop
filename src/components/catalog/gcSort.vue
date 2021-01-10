@@ -3,7 +3,25 @@
     <div class="sort__row">
       <div class="sort__col">
         <div class="sort__col-title">Сортировка:</div>
-        <div class="sort__col-wrapper"></div>
+        <div class="sort__col-box"></div>
+      </div>
+      <div class="sort__col">
+        <div class="sort__col-title">Цена: {{ slider[0] }} руб. - {{ slider[1] }} руб.</div>
+        <div class="sort__col-box sort__col-box--slider">
+          <vue-slider
+            :height="4"
+            :min="0"
+            :max="700"
+            :tooltip="'none'"
+            :railStyle="{ backgroundColor: 'rgb(255 255 255 / 50%)' }"
+            :processStyle="{ backgroundColor: 'rgb(255 255 255 / 100%)' }"
+            v-model="slider"
+          >
+            <template v-slot:dot>
+              <div class="custom-dot"></div>
+            </template>
+          </vue-slider>
+        </div>
       </div>
       <div class="sort__col">
         <div class="sort__col-title">Наполнители:</div>
@@ -92,7 +110,16 @@
 </template>
 
 <script>
+import VueSlider from 'vue-slider-component'
+import 'vue-slider-component/theme/default.css'
+
 export default {
-  name: "gcSort"
+  name: "gcSort",
+  components: {
+    VueSlider
+  },
+  data: () => ({
+    slider: [100, 500]
+  })
 }
 </script>
