@@ -21,11 +21,16 @@
       </div>
       <div class="header__right">
         <div class="header__buttons flex align">
-          <button class="header__button search">
-            <svg width="17" height="17">
-              <use href="~@/assets/img/sprite.svg#search"></use>
-            </svg>
-          </button>
+          <div class="header__button-wrapper">
+            <button @click="isSearchFormOpen = !isSearchFormOpen" class="header__button search">
+              <svg width="17" height="17">
+                <use href="~@/assets/img/sprite.svg#search"></use>
+              </svg>
+            </button>
+            <div class="search-form" :class="{ active: isSearchFormOpen }">
+              <input class="search-form__field" type="text" aria-label="Search something" placeholder="Крем-брюле">
+            </div>
+          </div>
           <button class="header__button login flex align">
             <svg width="21" height="19">
               <use href="~@/assets/img/sprite.svg#login"></use>
@@ -52,6 +57,14 @@
 
 <script>
 export default {
-  name: "gcHeader"
+  name: "gcHeader",
+  data: () => ({
+    isSearchFormOpen: false
+  }),
+  created() {
+    const onClickOutside = e => this.isSearchFormOpen = this.$el.contains(e.target) && this.isSearchFormOpen;
+    document.addEventListener('click', onClickOutside);
+    this.$on('hook:beforeDestroy', () => document.removeEventListener('click', onClickOutside));
+  },
 }
 </script>
