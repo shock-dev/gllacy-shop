@@ -1,0 +1,41 @@
+.pagination {
+  padding: 25px 0 35px;
+  justify-content: flex-end;
+  align-items: center;
+
+  &__arrow {
+
+    &.disabled {
+      opacity: .5;
+      pointer-events: none;
+    }
+
+    &-left {
+      margin-right: 10px;
+    }
+
+    &-right {
+      margin-left: 10px;
+    }
+
+    svg {
+      fill: #c1c6ce;
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 5px;
+  }
+
+  &__item.active .pagination__link {
+    background-color: $white;
+    color: $black;
+    font-size: 16px;
+  }
+
+  &__link {
+    padding: 6px 12px;
+    background-color: transparent;
+    border-radius: 50%;
+  }
+}
