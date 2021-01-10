@@ -48,4 +48,18 @@
             </g>
         </svg>
     </symbol>
+    <symbol id="pagination-right-arrow" viewBox="0 0 6.522 12.017">
+        <svg>
+            <g transform="translate(-0.865 -0.985)">
+                <path id="Shape" d="M6.372,5.657.864.148A.506.506,0,0,0,.148.864L5.3,6.015.147,11.165a.507.507,0,0,0,.716.717L6.372,6.373a.5.5,0,0,0,0-.716Z" transform="translate(0.865 0.985)"/>
+            </g>
+        </svg>
+    </symbol>
+    <symbol id="pagination-left-arrow" viewBox="0 0 6.522 12.017">
+        <svg>
+            <g transform="translate(7.386 13.002) rotate(-180)">
+                <path id="Shape" d="M6.372,5.657.864.148A.506.506,0,0,0,.148.864L5.3,6.015.147,11.165a.507.507,0,0,0,.716.717L6.372,6.373a.5.5,0,0,0,0-.716Z" transform="translate(0.865 0.985)"/>
+            </g>
+        </svg>
+    </symbol>
 </svg>
