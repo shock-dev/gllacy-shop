@@ -58,6 +58,38 @@
 
   }
 
+  .sort__col-box--slider {
+    width: 220px;
+  }
+
+  .vue-slider {
+    width: 100% !important;
+  }
+
+  .custom-dot {
+    width: 20px;
+    height: 20px;
+    background-color: $white;
+    position: absolute;
+    top: 50%;
+    border-radius: 50%;
+    transform: translateY(-50%);
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background-color: #ABABAB;
+      border-radius: 50%;
+      top: 50%;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      transform: translateY(-50%);
+    }
+  }
+
   .toggle {
 
     &__list {
