@@ -35,7 +35,7 @@
           <div class="cart-popup__item-consider">
             1,5 кг х <span>{{ price }} руб.</span>
           </div>
-          <div class="cart-popup__item-price">300 руб.</div>
+          <div class="cart-popup__item-price">{{ getPriceByWeight(price) }} руб.</div>
         </li>
       </ul>
       <div class="cart-popup__footer">
@@ -59,7 +59,12 @@ export default {
       products: 'items'
     }),
     getTotalPrice() {
-      return this.products.reduce((s, i) => s + i.price, 0)
+      return this.products.reduce((s, i) => s + ( i.price * 1.5 ), 0)
+    }
+  },
+  methods: {
+    getPriceByWeight(price) {
+      return price * 1.5
     }
   },
   created() {
