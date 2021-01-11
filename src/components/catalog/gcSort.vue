@@ -3,23 +3,7 @@
     <div class="sort__row">
       <div class="sort__col">
         <div class="sort__col-title">Сортировка:</div>
-        <div class="sort__col-box type">
-          <button
-            class="type__button"
-            :class="{ active: isPopupActive }"
-            @click="isPopupActive = !isPopupActive"
-          >
-            По популярности
-          </button>
-          <ul class="type__list" :class="{ active: isPopupActive }">
-            <li class="type__item">
-              <router-link class="type__link" to="#">По цене</router-link>
-            </li>
-            <li class="type__item">
-              <router-link class="type__link" to="#">По алфавиту</router-link>
-            </li>
-          </ul>
-        </div>
+        <gc-sort-type/>
       </div>
       <div class="sort__col">
         <div class="sort__col-title">Цена: {{ slider[0] }} руб. - {{ slider[1] }} руб.</div>
@@ -128,20 +112,16 @@
 <script>
 import VueSlider from 'vue-slider-component'
 import 'vue-slider-component/theme/default.css'
+import GcSortType from "@/components/catalog/gcSortType";
 
 export default {
   name: "gcSort",
   components: {
+    GcSortType,
     VueSlider
   },
   data: () => ({
-    slider: [100, 500],
-    isPopupActive: false
-  }),
-  created() {
-    const onClickOutside = e => this.isPopupActive = this.$el.contains(e.target) && this.isPopupActive;
-    document.addEventListener('click', onClickOutside);
-    this.$on('hook:beforeDestroy', () => document.removeEventListener('click', onClickOutside));
-  },
+    slider: [100, 500]
+  })
 }
 </script>
