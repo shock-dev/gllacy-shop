@@ -21,20 +21,7 @@
       </div>
       <div class="header__right">
         <div class="header__buttons flex align">
-          <div class="header__button-wrapper">
-            <button
-              @click="openPopup('search')"
-              class="header__button search"
-              :class="{ active: isSearchFormOpen }"
-            >
-              <svg width="17" height="17">
-                <use href="~@/assets/img/sprite.svg#search"></use>
-              </svg>
-            </button>
-            <div class="search-form" :class="{ active: isSearchFormOpen }">
-              <input class="search-form__field" type="text" aria-label="Search something" placeholder="Крем-брюле">
-            </div>
-          </div>
+          <gc-search-form/>
           <div class="header__button-wrapper">
             <button
               class="header__button login flex align"
@@ -128,9 +115,13 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import GcSearchForm from "@/components/app/header/gcSearchForm";
 
 export default {
   name: "gcHeader",
+  components: {
+    GcSearchForm
+  },
   data: () => ({
     isSearchFormOpen: false,
     isLoginFormOpen: false,
