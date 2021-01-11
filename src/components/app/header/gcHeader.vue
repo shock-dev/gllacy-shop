@@ -122,36 +122,10 @@ export default {
   components: {
     GcSearchForm
   },
-  data: () => ({
-    isSearchFormOpen: false,
-    isLoginFormOpen: false,
-    isCartOpen: false
-  }),
   computed: {
     ...mapGetters('cart', {
       products: 'items'
     })
-  },
-  methods: {
-    openPopup(elem) {
-      switch (elem) {
-        case 'search':
-          this.isCartOpen = false
-          this.isLoginFormOpen = false
-          this.isSearchFormOpen = !this.isSearchFormOpen
-          break
-        case 'login':
-          this.isCartOpen = false
-          this.isSearchFormOpen = false
-          this.isLoginFormOpen = !this.isLoginFormOpen
-          break
-        case 'cart':
-          this.isSearchFormOpen = false
-          this.isLoginFormOpen = false
-          this.isCartOpen = !this.isCartOpen
-          break
-      }
-    }
   }
 }
 </script>
