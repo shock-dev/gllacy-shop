@@ -66,3 +66,24 @@
   }
 
 }
+
+@media (max-width: 635px) {
+  .footer {
+    flex-direction: column;
+
+    &__social {
+      margin-bottom: 20px;
+    }
+  }
+
+  .footer__links-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer__link.like:before {
+    display: none;
+  }
+
+}
