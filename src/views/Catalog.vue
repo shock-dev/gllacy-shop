@@ -16,6 +16,9 @@ import GcPagination from "@/components/catalog/gcPagination";
 
 export default {
   name: "Catalog",
+  metaInfo: {
+    title: 'Gllacy shop - catalog'
+  },
   components: {
     GcPagination,
     GcProducts,

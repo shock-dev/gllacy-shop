@@ -19,6 +19,9 @@ import GcMap from "@/components/home/gcMap";
 
 export default {
   name: 'Home',
+  metaInfo: {
+    title: 'Gllacy shop'
+  },
   components: {
     GcMap,
     GcMore,
