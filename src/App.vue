@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import GcHeader from "@/components/app/gcHeader";
+import GcHeader from "@/components/app/header/gcHeader";
 import GcFooter from "@/components/app/gcFooter";
 
 export default {
