@@ -59,7 +59,7 @@ export default {
       products: 'items'
     }),
     getTotalPrice() {
-      return this.products.reduce((s, i) => s + ( i.price * 1.5 ), 0)
+      return this.products.reduce((s, i) => s + this.getPriceByWeight(i.price), 0)
     }
   },
   methods: {
