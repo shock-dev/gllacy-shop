@@ -6,3 +6,9 @@
     width: calc(100% / 12 * 3);
   }
 }
+
+@media (max-width: 1000px) {
+  .hits__item {
+    width: calc(100% / 12 * 6);
+  }
+}

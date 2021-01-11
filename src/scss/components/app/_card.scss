@@ -79,3 +79,17 @@
   }
 
 }
+
+@media (max-width: 1000px) {
+  .card__btn {
+    display: none;
+  }
+
+  .card__title {
+    padding-bottom: 20px;
+  }
+
+  .card {
+    padding-top: 14px;
+  }
+}
