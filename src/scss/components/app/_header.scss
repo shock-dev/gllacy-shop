@@ -256,3 +256,13 @@
   }
 
 }
+
+@media (max-width: 960px) {
+  .menu__list {
+    display: none;
+  }
+
+  .header__bottom {
+    display: none;
+  }
+}
