@@ -52,3 +52,41 @@
     padding: 36px 25px 40px 30px;
   }
 }
+
+@media (max-width: 1200px) {
+  .more .sub {
+    background-image: none;
+    background-color: #f8f7f3;
+  }
+}
+
+@media (max-width: 875px) {
+  .more {
+    flex-direction: column;
+    align-items: center;
+
+    &__item {
+      width: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .more__item .form {
+    justify-content: flex-end;
+  }
+
+  .more__item .form__field {
+    width: 300px;
+    flex-grow: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .more__item .form__field {
+    width: auto;
+    flex-grow: 1;
+  }
+}
