@@ -14,7 +14,7 @@
       <svg width="21" height="20">
         <use href="~@/assets/img/sprite.svg#cart"></use>
       </svg>
-      <span class="header__button-text">{{ products.length }} товара</span>
+      <span class="header__button-text">{{ getLengthOfProducts }}</span>
     </button>
     <div class="cart-popup" :class="{ active: isOpen }">
       <ul class="cart-popup__list">
@@ -60,11 +60,31 @@ export default {
     }),
     getTotalPrice() {
       return this.products.reduce((s, i) => s + this.getPriceByWeight(i.price), 0)
+    },
+    getLengthOfProducts() {
+      let length = this.products.length
+
+      return length + ' ' + this.getNoun(length, 'продукт', 'продукта', 'продуктов')
     }
   },
   methods: {
     getPriceByWeight(price) {
       return price * 1.5
+    },
+    getNoun(number, one, two, five) {
+      let n = Math.abs(number)
+
+      n %= 100
+
+      if (n >= 5 && n <= 20) return five
+
+      n %= 10;
+
+      if (n === 1) return one
+
+      if (n >= 2 && n <= 4) return two
+
+      return five
     }
   },
   created() {
