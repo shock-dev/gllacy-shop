@@ -46,3 +46,10 @@
     font-weight: 700;
   }
 }
+
+@media (max-width: 650px) {
+  .map {
+    padding: 0 15px;
+    margin: 0 -15px;
+  }
+}
