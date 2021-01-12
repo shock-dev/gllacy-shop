@@ -16,5 +16,11 @@
 @media (max-width: 600px) {
   .hits__item {
     width: calc(100%);
+    max-width: 300px;
+  }
+
+  .hits {
+    flex-direction: column;
+    align-items: center;
   }
 }
