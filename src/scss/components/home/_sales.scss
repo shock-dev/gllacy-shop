@@ -53,4 +53,39 @@
       }
     }
   }
+
+  .sales__item-title {
+    font-size: 30px;
+    line-height: 41px;
+    font-weight: 700;
+  }
+
+  .sales__item-text {
+    margin: 5px 0 15px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 450px) {
+  .sales {
+    margin-top: 0;
+  }
+
+  .sales__item {
+    padding: 15px;
+  }
+
+  .sales__item-title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .sales__item-text {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .sales__item-btn {
+    font-size: 14px;
+  }
 }
