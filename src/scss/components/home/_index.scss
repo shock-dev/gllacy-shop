@@ -5,3 +5,21 @@
   margin: 0 -25px;
   padding: 90px 25px 0;
 }
+
+@media (max-width: 650px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .home {
+    margin: 0 -15px;
+    padding: 90px 15px 0;
+  }
+}
+
+@media (max-width: 450px) {
+  .home {
+    margin: 0 -15px;
+    padding: 0 15px;
+  }
+}
