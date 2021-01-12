@@ -90,3 +90,32 @@
     flex-grow: 1;
   }
 }
+
+@media (max-width: 450px) {
+  .more__item .form {
+    flex-direction: column;
+  }
+
+  .more__item .form__field {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .more .sub {
+    padding: 20px;
+  }
+
+  .more__item-text {
+    margin-bottom: 15px;
+    font-size: 13px;
+  }
+
+  .more__item-subtitle {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+
+  .more__item-title {
+    font-size: 20px;
+  }
+}
