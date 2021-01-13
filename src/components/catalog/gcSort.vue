@@ -1,5 +1,5 @@
 <template>
-  <div class="sort" :class="{ active: overlay }">
+  <div class="sort" :class="{ active: sort }">
     <div class="sort__wrapper">
       <div class="sort__head">
         <button class="sort__head-cancel" @click="hideAll">
@@ -122,6 +122,7 @@
 import VueSlider from 'vue-slider-component'
 import 'vue-slider-component/theme/default.css'
 import GcSortType from "@/components/catalog/gcSortType";
+import { mapGetters, mapMutations } from 'vuex'
 
 export default {
   name: "gcSort",
@@ -131,6 +132,12 @@ export default {
   },
   data: () => ({
     slider: [100, 500]
-  })
+  }),
+  methods: {
+    ...mapMutations(['hideAll'])
+  },
+  computed: {
+    ...mapGetters(['sort'])
+  }
 }
 </script>
