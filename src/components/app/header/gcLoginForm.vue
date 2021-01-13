@@ -1,5 +1,5 @@
 <template>
-  <div class="header__button-wrapper">
+  <div class="header__button-wrapper login">
     <button
         class="header__button login flex align"
         :class="{ active: isOpen }"

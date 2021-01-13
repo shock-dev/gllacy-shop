@@ -24,6 +24,7 @@
           <gc-search-form/>
           <gc-login-form/>
           <gc-cart/>
+          <button class="header__burger"></button>
         </div>
       </div>
     </div>
@@ -32,6 +33,9 @@
         <p class="header__date">С 10 до 20, ежедневно</p>
         <p class="header__phone">8 812 450-25-25</p>
       </div>
+    </div>
+    <div class="mobile-menu">
+
     </div>
   </header>
 </template>

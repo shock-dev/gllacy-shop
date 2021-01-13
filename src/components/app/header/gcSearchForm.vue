@@ -1,5 +1,5 @@
 <template>
-  <div class="header__button-wrapper">
+  <div class="header__button-wrapper search">
     <button
         class="header__button search"
         :class="{ active: isOpen }"

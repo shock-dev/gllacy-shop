@@ -1,5 +1,5 @@
 <template>
-  <div class="header__button-wrapper">
+  <div class="header__button-wrapper cart">
     <button v-if="!products.length" class="header__button cart flex align disabled">
       <svg width="21" height="20">
         <use href="~@/assets/img/sprite.svg#cart"></use>
@@ -17,27 +17,29 @@
       <span class="header__button-text">{{ getLengthOfProducts }}</span>
     </button>
     <div class="cart-popup" :class="{ active: isOpen }">
-      <ul class="cart-popup__list">
-        <li
-            class="cart-popup__item flex align"
-            v-for="({ title, price, imageUrl }, index) in products"
-            :key="index"
-        >
-          <button class="cart-popup__item-del">
-            <img src="~@/assets/img/cross-small.svg" alt="Delete product">
-          </button>
-          <div class="cart-popup__item-img">
-            <img :src="imageUrl" :alt="title">
-          </div>
-          <div class="cart-popup__item-title">
-            {{ title }}
-          </div>
-          <div class="cart-popup__item-consider">
-            1,5 кг х <span>{{ price }} руб.</span>
-          </div>
-          <div class="cart-popup__item-price">{{ getPriceByWeight(price) }} руб.</div>
-        </li>
-      </ul>
+      <div class="cart-popup__wrapper">
+        <ul class="cart-popup__list">
+          <li
+              class="cart-popup__item flex align"
+              v-for="({ title, price, imageUrl }, index) in products"
+              :key="index"
+          >
+            <button class="cart-popup__item-del">
+              <img src="~@/assets/img/cross-small.svg" alt="Delete product">
+            </button>
+            <div class="cart-popup__item-img">
+              <img :src="imageUrl" :alt="title">
+            </div>
+            <div class="cart-popup__item-title">
+              {{ title }}
+            </div>
+            <div class="cart-popup__item-consider">
+              1,5 кг х <span>{{ price }} руб.</span>
+            </div>
+            <div class="cart-popup__item-price">{{ getPriceByWeight(price) }} руб.</div>
+          </li>
+        </ul>
+      </div>
       <div class="cart-popup__footer">
         <div class="cart-popup__footer-total">Итого: {{ getTotalPrice }} руб.</div>
         <button class="cart-popup__button def-btn">Оформить заказ</button>
