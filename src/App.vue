@@ -2,6 +2,7 @@
   <div id="app" class="container">
     <overlay/>
     <gc-header/>
+    <gc-mobile-menu/>
     <router-view/>
     <gc-footer/>
   </div>
@@ -11,9 +12,11 @@
 import GcHeader from "@/components/app/header/gcHeader";
 import GcFooter from "@/components/app/gcFooter";
 import Overlay from "@/components/app/overlay";
+import GcMobileMenu from "@/components/app/header/gcMobileMenu";
 
 export default {
   components: {
+    GcMobileMenu,
     Overlay,
     GcFooter,
     GcHeader

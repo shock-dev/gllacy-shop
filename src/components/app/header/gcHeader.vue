@@ -24,7 +24,7 @@
           <gc-search-form/>
           <gc-login-form/>
           <gc-cart/>
-          <button class="header__burger">
+          <button class="header__burger" @click="openMobileMenu">
             <span></span>
           </button>
         </div>
@@ -36,7 +36,6 @@
         <p class="header__phone">8 812 450-25-25</p>
       </div>
     </div>
-    <gc-mobile-menu/>
   </header>
 </template>
 
@@ -44,15 +43,22 @@
 import GcSearchForm from "@/components/app/header/gcSearchForm";
 import GcLoginForm from "@/components/app/header/gcLoginForm";
 import GcCart from "@/components/app/header/gcCart";
-import GcMobileMenu from "@/components/app/header/gcMobileMenu";
+import { mapMutations } from 'vuex'
 
 export default {
   name: "gcHeader",
   components: {
-    GcMobileMenu,
     GcCart,
     GcLoginForm,
     GcSearchForm
+  },
+  methods: {
+    ...mapMutations(['toggleOverlay', 'toggleMobileMenu']),
+    openMobileMenu() {
+      document.body.classList.add('lock')
+      this.toggleOverlay()
+      this.toggleMobileMenu()
+    }
   }
 }
 </script>
