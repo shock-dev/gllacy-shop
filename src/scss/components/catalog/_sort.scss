@@ -10,6 +10,23 @@
     }
   }
 
+  &__head {
+    justify-content: flex-end;
+    display: none;
+  }
+
+  &__head-cancel {
+    width: 20px;
+    height: 20px;
+    outline: none;
+
+    svg {
+      fill: $white;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
   &__col {
 
     &:not(:last-child) {
@@ -223,8 +240,79 @@
 
 }
 
-@media (max-width: 950px) {
+@media (max-width: 960px) {
   .sort {
-    display: none;
+    position: fixed;
+    z-index: 200;
+    background-color: #849D8F;
+    padding: 20px;
+    width: 100%;
+    max-width: 360px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    min-height: 100vh;
+    transform: translateX(-100%);
+    transition: transform .3s;
+    overflow-y: scroll;
+
+    &.active {
+      transform: translateX(0);
+    }
+
+    &__wrapper {
+      position: relative;
+      overflow-y: scroll;
+    }
+
+    &__row {
+      flex-direction: column;
+      align-items: flex-start;
+
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+    }
+
+    .toggle__list {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .toggle__item:not(:last-child) {
+      margin-right: 0;
+    }
+
+    .toggle {
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 0;
+    }
+
+    &__col {
+      margin-bottom: 20px;
+    }
+
+    &__col.button {
+      margin-bottom: 0;
+    }
+
+    .toggle__item:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
   }
+}
+
+@media (max-width: 500px) {
+  .sort {
+    max-width: 100%;
+    padding-bottom: 40px;
+
+    &__head {
+      display: flex;
+    }
+
+  }
+
 }
