@@ -227,10 +227,43 @@
   }
 
   &__burger {
-    width: 36px;
+    width: 40px;
     height: 36px;
-    background-color: red;
     display: none;
+    background-color: $white;
+    position: relative;
+    border-radius: 4px;
+
+    span {
+      display: block;
+      position: absolute;
+      width: 50%;
+      right: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 3px;
+      background-color: $light-black;
+    }
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      right: 5px;
+      height: 3px;
+      background-color: $light-black;
+    }
+
+    &:before {
+      width: 70%;
+      top: 10px;
+    }
+
+    &:after {
+      width: 70%;
+      bottom: 10px;
+    }
+
   }
 
 }

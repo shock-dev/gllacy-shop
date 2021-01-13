@@ -24,7 +24,9 @@
           <gc-search-form/>
           <gc-login-form/>
           <gc-cart/>
-          <button class="header__burger"></button>
+          <button class="header__burger">
+            <span></span>
+          </button>
         </div>
       </div>
     </div>
