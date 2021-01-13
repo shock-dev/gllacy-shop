@@ -9,3 +9,9 @@
     margin-bottom: 25px;
   }
 }
+
+@media (max-width: 500px) {
+  .catalog__title {
+    font-size: 30px;
+  }
+}

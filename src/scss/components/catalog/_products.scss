@@ -5,3 +5,27 @@
     width: calc(100% / 12 * 3);
   }
 }
+
+@media (max-width: 950px) {
+  .products__item {
+    width: calc(100% / 12 * 4);
+  }
+}
+
+@media (max-width: 750px) {
+  .products__item {
+    width: calc(100% / 12 * 6);
+  }
+}
+
+@media (max-width: 550px) {
+  .products {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .products__item {
+    max-width: 300px;
+    width: calc(100%);
+  }
+}
