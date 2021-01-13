@@ -297,6 +297,34 @@
 
 }
 
+.mobile-menu {
+  position: fixed;
+  max-width: 400px;
+  width: 100%;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: #849D8F;
+  padding: 20px;
+
+  &__head {
+    display: flex;
+    justify-content: flex-end;
+
+    &-button {
+      width: 30px;
+      height: 30px;
+      outline: none;
+
+      svg {
+        width: 100%;
+        height: 100%;
+        fill: $white;
+      }
+    }
+  }
+}
+
 @media (max-width: 960px) {
   .menu__list {
     display: none;

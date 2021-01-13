@@ -36,9 +36,7 @@
         <p class="header__phone">8 812 450-25-25</p>
       </div>
     </div>
-    <div class="mobile-menu">
-
-    </div>
+    <gc-mobile-menu/>
   </header>
 </template>
 
@@ -46,10 +44,12 @@
 import GcSearchForm from "@/components/app/header/gcSearchForm";
 import GcLoginForm from "@/components/app/header/gcLoginForm";
 import GcCart from "@/components/app/header/gcCart";
+import GcMobileMenu from "@/components/app/header/gcMobileMenu";
 
 export default {
   name: "gcHeader",
   components: {
+    GcMobileMenu,
     GcCart,
     GcLoginForm,
     GcSearchForm
