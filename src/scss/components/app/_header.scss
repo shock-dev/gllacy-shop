@@ -319,6 +319,10 @@
  }
 
 @media (max-width: 680px) {
+  .header__logo img {
+    max-width: 80%;
+  }
+
   .header__button-wrapper.cart {
     position: static;
   }
@@ -386,4 +390,10 @@
     margin-bottom: 10px;
   }
 
+}
+
+@media (max-width: 450px) {
+  .header__button-text {
+    display: none;
+  }
 }
