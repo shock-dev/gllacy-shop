@@ -26,7 +26,7 @@
         </svg>
       </button>
     </form>
-    <button class="mobile-menu__login header__button login flex align">
+    <button class="mobile-menu__login header__button login flex align" @click="openLoginForm">
       <svg width="21" height="19">
         <use href="~@/assets/img/sprite.svg#login"></use>
       </svg>
@@ -48,7 +48,15 @@ export default {
     ...mapGetters(['mobileMenu'])
   },
   methods: {
-    ...mapMutations(['hideAll'])
+    ...mapMutations(['hideAll', 'toggleLoginForm', 'toggleOverlay']),
+    openLoginForm() {
+      this.hideAll()
+
+      setTimeout(() => {
+        this.toggleOverlay()
+        this.toggleLoginForm()
+      }, 300)
+    }
   }
 }
 </script>
