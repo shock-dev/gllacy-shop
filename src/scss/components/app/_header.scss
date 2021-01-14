@@ -379,6 +379,7 @@
   }
 
   &__login {
+    display: none;
     margin-top: 20px;
     height: 45px;
     align-self: center;
@@ -431,6 +432,10 @@
   }
 
   .mobile-menu__login-form {
+    display: flex;
+  }
+
+  .mobile-menu__login {
     display: flex;
   }
 
