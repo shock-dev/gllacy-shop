@@ -298,6 +298,9 @@
 }
 
 .mobile-menu {
+  display: none;
+  text-align: center;
+  color: $white;
   position: fixed;
   z-index: 230;
   max-width: 400px;
@@ -306,16 +309,18 @@
   bottom: 0;
   top: 0;
   background-color: #849D8F;
-  padding: 20px;
+  padding: 40px;
   transform: translateX(100%);
   transition: transform .3s;
+  flex-direction: column;
+  justify-content: center;
 
   &.active {
     transform: translateX(0);
   }
 
   &__head {
-    display: flex;
+    display: none;
     justify-content: flex-end;
 
     &-button {
@@ -328,8 +333,61 @@
         height: 100%;
         fill: $white;
       }
+
+    }
+
+  }
+
+  &__list {
+
+    &-link {
+      width: 100%;
+      padding: 20px 0;
+      font-weight: 700;
+      font-size: 20px;
+    }
+
+  }
+
+  &__form {
+    display: none;
+    margin-top: 20px;
+
+    &-btn {
+      width: 40px;
+      height: 45px;
+      background-color: #5e6f68;
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+
+      svg {
+        width: 18px;
+        height: 18px;
+        fill: $white;
+      }
     }
   }
+
+  &__search {
+    flex-grow: 1;
+    height: 45px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    padding: 0 20px;
+  }
+
+  &__login {
+    margin-top: 20px;
+    height: 45px;
+    align-self: center;
+    padding: 0 25px;
+  }
+
+  &__info {
+    margin-top: 20px;
+    align-items: center;
+  }
+
 }
 
 @media (max-width: 960px) {
@@ -344,12 +402,20 @@
   .header__burger {
     display: block;
   }
+
+  .mobile-menu {
+    display: flex;
+  }
 }
 
 @media (max-width: 750px) {
   .header__button-wrapper.search,
   .header__button-wrapper.login {
     display: none;
+  }
+
+  .mobile-menu__form {
+    display: flex;
   }
  }
 
