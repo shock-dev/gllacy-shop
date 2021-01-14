@@ -1,12 +1,10 @@
 <template>
   <div class="mobile-menu" :class="{ active: mobileMenu }">
-    <div class="mobile-menu__head">
-      <button class="mobile-menu__head-button" @click="hideAll">
-        <svg>
-          <use href="~@/assets/img/sprite.svg#cancel"></use>
-        </svg>
-      </button>
-    </div>
+    <button class="mobile-menu__cancel" @click="hideAll">
+      <svg>
+        <use href="~@/assets/img/sprite.svg#cancel"></use>
+      </svg>
+    </button>
     <ul class="mobile-menu__list">
       <li class="mobile-menu__list-item">
         <router-link class="mobile-menu__list-link" :to="{ name: 'Catalog' }">Каталог</router-link>

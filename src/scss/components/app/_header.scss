@@ -321,21 +321,19 @@
     transform: translateX(0);
   }
 
-  &__head {
+  &__cancel {
     display: none;
-    justify-content: flex-end;
+    position: absolute;
+    top: 35px;
+    right: 35px;
+    width: 30px;
+    height: 30px;
+    outline: none;
 
-    &-button {
-      width: 30px;
-      height: 30px;
-      outline: none;
-
-      svg {
-        width: 100%;
-        height: 100%;
-        fill: $white;
-      }
-
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: $white;
     }
 
   }
@@ -515,8 +513,25 @@
 
 }
 
+@media (max-width: 520px) {
+  .mobile-menu {
+    max-width: 100%;
+    padding: 60px;
+  }
+
+  .mobile-menu__cancel {
+    display: block;
+  }
+}
+
 @media (max-width: 450px) {
   .header__button-text {
     display: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .mobile-menu {
+    padding: 20px;
   }
 }
