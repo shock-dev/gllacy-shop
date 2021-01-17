@@ -6,13 +6,13 @@
       </svg>
     </button>
     <ul class="mobile-menu__list">
-      <li class="mobile-menu__list-item">
+      <li class="mobile-menu__list-item" @click="hideAll">
         <router-link class="mobile-menu__list-link" :to="{ name: 'Catalog' }">Каталог</router-link>
       </li>
-      <li class="mobile-menu__list-item">
+      <li class="mobile-menu__list-item" @click="hideAll">
         <router-link  class="mobile-menu__list-link" :to="{ name: 'Catalog' }">Доставка и оплата</router-link>
       </li>
-      <li class="mobile-menu__list-item">
+      <li class="mobile-menu__list-item" @click="hideAll">
         <router-link  class="mobile-menu__list-link" :to="{ name: 'Catalog' }">О Компании</router-link>
       </li>
     </ul>
