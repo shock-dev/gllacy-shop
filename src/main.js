@@ -1,8 +1,9 @@
 import Vue from 'vue'
-import App from './App.vue'
+import VueMeta from 'vue-meta'
+import App from './App'
 import router from './router'
 import store from './store'
-import VueMeta from 'vue-meta'
+import './styles/index.scss'
 
 Vue.use(VueMeta)
 
